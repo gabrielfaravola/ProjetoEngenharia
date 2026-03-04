@@ -13,6 +13,7 @@
 | **RF08** | Cálculo de Coerência Geral | O sistema deve gerar uma porcentagem (%) de coerência global entre o discurso e a proposta de governo. |
 | **RF09** | Cálculo de Coerência por Tópico | O sistema deve exibir o índice de fidelidade para temas específicos (Ex: Saúde, Economia, Educação). |
 | **RF10** | Identificação do Espectro Político | O sistema deve identificar o espectro político do candidato e exibi-lo em um mapa visual. |
+| **RF11** | Fakenews| Verificação de Fakenews sobre falas e mídias dos candidatos. |
 
 ---
 
