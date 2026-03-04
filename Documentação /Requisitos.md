@@ -5,7 +5,7 @@
 | :--- | :--- | :--- |
 | **RF01** | Listagem de Candidatos | O sistema deve listar todos os candidatos de uma eleição de um ano específico (Ano X). |
 | **RF02** | Detalhamento de Candidato | O sistema deve permitir a seleção de um candidato específico para exibição de informações detalhadas. |
-| **RF03** | Proposta de Governo Simplificada | O sistema deve usar IA para gerar ou exibir uma versão resumida e de fácil entendimento do plano de governo. |
+| **RF03** | Proposta de Governo Simplificada | O sistema deve exibir uma versão resumida e de fácil entendimento do plano de governo. |
 | **RF04** | Clipping de Mídias Externas | O sistema deve buscar e listar participações do candidato em vídeos externos (entrevistas, debates e podcasts). |
 | **RF05** | Resumo de Vídeos | O sistema deve fornecer resumos textuais (via IA) das últimas participações em vídeo do candidato. |
 | **RF06** | Monitoramento de Redes Sociais | O sistema deve coletar e resumir os assuntos abordados nas postagens recentes do candidato. |
