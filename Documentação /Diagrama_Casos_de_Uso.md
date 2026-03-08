@@ -4,12 +4,15 @@
 
 ---
 
-### Especificação principal:
-[imagem]
-### Especificação UC1:
-[imagem]
-### Especificação UC2:
-[imagem]
+# Descrição casos de uso
+
+### UC1 - Visualizar Espectro Político:
+- Atores: Cidadãos Brasileiros.
+- Sumário: O sistema identifica e posiciona o candidato em um mapa ideológico para contextualizar suas propostas.
+- Pré-Condição: O usuário deve ter selecionado um candidato.
+- Pós-Condição: O usuário visualiza a inclinação política do candidato.
+### UC2 - Visualizar índices de coerência:
+- Atores
 ### Especificação UC3:
 [imagem]
 ### Especificação UC4:
