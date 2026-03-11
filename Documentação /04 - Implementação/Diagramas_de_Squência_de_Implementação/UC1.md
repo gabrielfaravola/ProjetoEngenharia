@@ -1,5 +1,5 @@
 # Visualizar Espectro Político
-[![](https://img.plantuml.biz/plantuml/svg/VLH1hjem4Dr7oXr6VAc2nRy0GkZJjAgG-5BKgks6pU0CODNnfBP3IszJzGZTTSl5EZO4oASqYyYE_TwRUM-K9n_GXROsUUQ_QDkWmnfys1kIjzFgveY-jcGLFPFtkA6PqHiBYcmWbsTvXYgmWq6XAwmEltW0wE6ZFvwj-3iCFcdw1iFIaHSC1iqM5hWdDnh0mxEseN24TPw1F28OjD8DsY2CQ2iX3LoIMskpj94eqST5df6jG0JEElDOqHeLUHZExOfRMqM9TrlsuVDM1_gVnXiAQBQqj0NRuDWOSacg2CxSIisQncXrrOleY2-ANflsdp86lTThWIZajxuX9HfB-u7SJa19wBI-rIhP1G-lO6xN3YMWLW9oWdbOu4xkHgDlzQG9QYj-JmrxBVdiaqRSmcIYEwEcqvvSJ0qUfybU68EABJgWMYAKWwxiGOfSxp3GAOWyImX1HhS4kIFNtHwgpk5vDRf27dtDiuGGvAdz9DjvvUw1prxbMOSJYjJT68oEyoskdREzHnC1UPPWZxqI5a8nASKv9G5ZBMFBPRiIErWCg-W5GPvPbWrBrvVAPcR3JeUQeI90U_WfPSddYZqqFMBP7_uaRfzdmq9e8n0x_qesMdBbqJ6fgDHh-sBwNMYlv2lhZjPVydOaWsBHdOc6T68QzIYww8wX2pxDpLZSYDEeVo3Ks23eYjWSVczULj3Dp9DSJt-Qlm00)](https://editor.plantuml.com/uml/VLH1hjem4Dr7oXr6VAc2nRy0GkZJjAgG-5BKgks6pU0CODNnfBP3IszJzGZTTSl5EZO4oASqYyYE_TwRUM-K9n_GXROsUUQ_QDkWmnfys1kIjzFgveY-jcGLFPFtkA6PqHiBYcmWbsTvXYgmWq6XAwmEltW0wE6ZFvwj-3iCFcdw1iFIaHSC1iqM5hWdDnh0mxEseN24TPw1F28OjD8DsY2CQ2iX3LoIMskpj94eqST5df6jG0JEElDOqHeLUHZExOfRMqM9TrlsuVDM1_gVnXiAQBQqj0NRuDWOSacg2CxSIisQncXrrOleY2-ANflsdp86lTThWIZajxuX9HfB-u7SJa19wBI-rIhP1G-lO6xN3YMWLW9oWdbOu4xkHgDlzQG9QYj-JmrxBVdiaqRSmcIYEwEcqvvSJ0qUfybU68EABJgWMYAKWwxiGOfSxp3GAOWyImX1HhS4kIFNtHwgpk5vDRf27dtDiuGGvAdz9DjvvUw1prxbMOSJYjJT68oEyoskdREzHnC1UPPWZxqI5a8nASKv9G5ZBMFBPRiIErWCg-W5GPvPbWrBrvVAPcR3JeUQeI90U_WfPSddYZqqFMBP7_uaRfzdmq9e8n0x_qesMdBbqJ6fgDHh-sBwNMYlv2lhZjPVydOaWsBHdOc6T68QzIYww8wX2pxDpLZSYDEeVo3Ks23eYjWSVczULj3Dp9DSJt-Qlm00)
+
 
 ---
 ## Codificação do Diagrama
@@ -7,26 +7,27 @@
 @startuml
 skinparam style strictuml
 skinparam sequenceMessageAlign center
+skinparam ParticipantPadding 40
 
 actor "Cidadão" as User
 
 box "View (Presentation Layer)" #MintCream
-    participant "CandidatoPerfil\nView" as View
+participant "CandidatoPerfilView" as View
 end box
 
 box "Interfaces (Inbound)" #GhostWhite
-    participant "CandidatoDetalhe\nController" as Ctrl
+participant "CandidatoDetalheController" as Ctrl
 end box
 
 box "Application Layer" #AliceBlue
-    participant "ClassificacaoEspectro\nService" as Service
+participant "ClassificacaoEspectroService" as Service
 end box
 
-box "Ports & Infrastructure" #Lavender
-    participant "ConteudoRepository" as Repo <<interface>>
+box "Ports (Interfaces)" #Lavender
+participant "ConteudoRepository" as Repo <<interface>>
 end box
 
-User -> View : clicar em "Ver Espectro"
+User -> View : exibirEspectro(candidatoId)
 activate View
 
 View -> Ctrl : verEspectro(candidatoId)
@@ -37,22 +38,23 @@ activate Service
 
 Service -> Repo : listarPorCandidato(candidatoId)
 activate Repo
+
 Repo --> Service : List<PosicionamentoPublico>
 deactivate Repo
 
 note over Service
-Algoritmo de análise
-dos posicionamentos públicos
-(CategoriaEspectroPolitico)
+Analisa os posicionamentos públicos
+do candidato e determina sua
+CategoriaEspectroPolitico
 end note
 
 Service --> Ctrl : CategoriaEspectroPolitico
 deactivate Service
 
-Ctrl --> View : retornarCategoria(espectro)
+Ctrl --> View : CategoriaEspectroPolitico
 deactivate Ctrl
 
-View --> User : Renderiza mapa ideológico
+View --> User : renderizar espectro político
 deactivate View
 
 @enduml
