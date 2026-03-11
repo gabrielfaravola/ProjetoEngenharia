@@ -155,4 +155,59 @@ interface IAResumoPort {
 }
 
 }
+}
+
+package "Infrastructure (Outbound Adapters)" {
+
+class CandidatoRepositoryImpl
+class PlanoRepositoryImpl
+class TopicoPlanoRepositoryImpl
+class ConteudoRepositoryImpl
+class IAResumoAdapter
+
+}
+
+' Inbound → Application
+
+BuscaCandidatoController --> ConsultaCandidatoService
+
+CandidatoDetalheController --> PlanoGovernoService
+CandidatoDetalheController --> ClassificacaoEspectroService
+CandidatoDetalheController --> AnaliseCoerenciaService
+
+' Application → Ports
+
+ConsultaCandidatoService --> CandidatoRepository
+
+PlanoGovernoService --> PlanoRepository
+PlanoGovernoService --> IAResumoPort
+
+AnaliseCoerenciaService --> TopicoPlanoRepository
+AnaliseCoerenciaService --> ConteudoRepository
+
+ClassificacaoEspectroService --> ConteudoRepository
+
+' Ports → Infrastructure
+
+CandidatoRepository <|.. CandidatoRepositoryImpl
+PlanoRepository <|.. PlanoRepositoryImpl
+TopicoPlanoRepository <|.. TopicoPlanoRepositoryImpl
+ConteudoRepository <|.. ConteudoRepositoryImpl
+IAResumoPort <|.. IAResumoAdapter
+
+' Domain relationships
+
+Candidato "1" -- "1" PlanoDeGoverno
+Candidato "1" -- "1" IndiceCoerencia
+Candidato "1" -- "1" CategoriaEspectroPolitico
+
+PlanoDeGoverno "1" -- "*" TopicoPlano
+
+Candidato "1" -- "*" PosicionamentoPublico
+PosicionamentoPublico "1" -- "*" ConteudoMidia
+
+IndiceCoerencia "1" -- "*" CoerenciaTopico
+TopicoPlano "1" -- "*" CoerenciaTopico
+
+@enduml
 ```
