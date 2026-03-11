@@ -45,67 +45,230 @@ O sistema é organizado em camadas:
 ```plantuml
 @startuml
 
-
+skinparam packageStyle rectangle
 skinparam linetype ortho
 left to right direction
-skinparam shadowing false
 
-package "
-package "interfaces" {
+package "View" {
 
-  class BuscaCandidatoController
-  class CandidatoDetalheController
+class CandidatoListView {
+        controller: BuscaCandidatoController
+        
+        exibirListaCandidatos()
+        selecionarCandidadto(id: int)
+    }
 
-}
-
-package "application" {
-
-  class ConsultaCandidatoService
-  class PlanoGovernoService
-  class AnaliseCoerenciaService
-  class ClassificacaoEspectroService
-
-}
-
-package "domain.entities" {
-
-  class Candidato
-  class PlanoDeGoverno
-  class TopicoPlano
-  class PosicionamentoPublico
-  class ConteudoMidia
-  class IndiceCoerencia
-  class CoerenciaTopico
-  enum CategoriaEspectroPolitico
+    class CandidatoPerfilView {
+        controller: CandidatoDetalheController
+        
+        exibirPlano(candidatoId: int)
+        exibirEspectro(candidatoId: int)
+        exibirCoerencia(candidatoId: int)
+        exibirResumoPosicionamentos(candidatoId: int)
+    }
 
 }
 
-package "domain.ports" {
+package "Interfaces (Inbound Adapters)" {
 
-  interface CandidatoRepository
-  interface PlanoRepository
-  interface TopicoPlanoRepository
-  interface ConteudoRepository
-  interface IAResumoPort
+class BuscaCandidatoController {
+ consultaCandidatoService: ConsultaCandidatoService
+
+ buscarCandidato(id: int)
+ listarCandidatos()
+}
+
+class CandidatoDetalheController {
+ planoService: PlanoGovernoService
+ espectroService: ClassificacaoEspectroService
+ coerenciaService: AnaliseCoerenciaService
+
+ verPlano(candidatoId: int)
+ verEspectro(candidatoId: int)
+ verCoerencia(candidatoId: int)
+ verResumoPosicionamentos(candidatoId: int)
+}
 
 }
 
-package "infrastructure" {
+package "Application Layer" {
 
-  class CandidatoRepositoryImpl
-  class PlanoRepositoryImpl
-  class TopicoPlanoRepositoryImpl
-  class ConteudoRepositoryImpl
-  class IAResumoAdapter
+class ConsultaCandidatoService {
+ candidatoRepository: CandidatoRepository
+
+ buscarCandidato(id: int): Candidato
+ listarCandidatos(): List<Candidato>
+}
+
+class PlanoGovernoService {
+ planoRepository: PlanoRepository
+ iaResumoPort: IAResumoPort
+
+ buscarPlano(candidatoId: int): PlanoDeGoverno
+ gerarOuBuscarResumo(candidatoId: int): String
+}
+
+class AnaliseCoerenciaService {
+ topicoPlanoRepository: TopicoPlanoRepository
+ conteudoRepository: ConteudoRepository
+
+ calcularIndice(candidatoId: int): IndiceCoerencia
+}
+
+class ClassificacaoEspectroService {
+ conteudoRepository: ConteudoRepository
+
+ classificar(candidatoId: int): CategoriaEspectroPolitico
+}
+
+class ResumoPosicionamentoService {
+ conteudoRepository: ConteudoRepository
+ 
+ buscarResumosPosicionamentos (candidatoId: int)
+}
 
 }
 
-' Dependências entre pacotes
+package "Domain Layer" {
 
-interfaces --> application
-domain.ports --> infrastructure
-application --> domain.entities
-application --> domain.ports
+package "Entities" {
+
+class Candidato {
+ id: int
+ nome: String
+ partido: String
+ biografia: String
+ anoEleicao: int
+ indiceCoerencia : float
+}
+
+class PlanoDeGoverno {
+ id: int
+ titulo: String
+ resumo: String
+ dataPublicacao: Date
+}
+
+class TopicoPlano {
+ id: int
+ titulo: String
+ descricao: String
+ resumo: String
+}
+
+class PosicionamentoPublico {
+ id: int
+ tema: String
+ descricao: String
+ data: Date
+ fonte: String
+}
+
+class CoerenciaTopico {
+ id: int
+ topico: String
+ indice: float
+}
+
+enum CategoriaEspectroPolitico {
+ EXTREMA_ESQUERDA
+ ESQUERDA
+ CENTRO_ESQUERDA
+ CENTRO
+ CENTRO_DIREITA
+ DIREITA
+ EXTREMA_DIREITA
+}
+}
+}
+
+package "Ports (Interfaces)" {
+
+interface CandidatoRepository {
+ buscarPorId(id: int): Candidato
+ listar(): List<Candidato>
+}
+
+interface PlanoRepository {
+ buscarPorCandidatoId(candidatoId: int): PlanoDeGoverno
+ salvar(plano: PlanoDeGoverno)
+}
+
+interface TopicoPlanoRepository {
+ listarPorPlano(planoId: int): List<TopicoPlano>
+}
+
+interface ConteudoRepository {
+ listarPorCandidato(candidatoId: int): List<PosicionamentoPublico>
+}
+
+interface IAResumoPort {
+ gerarResumo(plano: PlanoDeGoverno): String
+}
+
+}
+
+package "Infrastructure (Outbound Adapters)" {
+
+class CandidatoRepositoryImpl
+class PlanoRepositoryImpl
+class TopicoPlanoRepositoryImpl
+class ConteudoRepositoryImpl
+class IAResumoAdapter
+
+}
+
+' Inbound → Application
+
+BuscaCandidatoController --> ConsultaCandidatoService
+
+CandidatoDetalheController --> PlanoGovernoService
+CandidatoDetalheController --> ClassificacaoEspectroService
+CandidatoDetalheController --> AnaliseCoerenciaService
+CandidatoDetalheController --> ResumoPosicionamentoService
+
+' Application → Ports
+
+ConsultaCandidatoService --> CandidatoRepository
+
+PlanoGovernoService --> PlanoRepository
+PlanoGovernoService --> IAResumoPort
+PlanoGovernoService --> TopicoPlanoRepository
+
+AnaliseCoerenciaService --> TopicoPlanoRepository
+AnaliseCoerenciaService --> ConteudoRepository
+
+ClassificacaoEspectroService --> ConteudoRepository
+ResumoPosicionamentoService --> ConteudoRepository
+ResumoPosicionamentoService --> IAResumoPort
+
+
+' Ports → Infrastructure
+
+CandidatoRepository <|.. CandidatoRepositoryImpl
+PlanoRepository <|.. PlanoRepositoryImpl
+TopicoPlanoRepository <|.. TopicoPlanoRepositoryImpl
+ConteudoRepository <|.. ConteudoRepositoryImpl
+IAResumoPort <|.. IAResumoAdapter
+
+' Domain relationships
+
+Candidato "1" -- "1" CategoriaEspectroPolitico : possui >
+Candidato "1" -- "1" PlanoDeGoverno : possui >
+Candidato "1" -- "*" PosicionamentoPublico : possui >
+
+PlanoDeGoverno "1" *-- "*" TopicoPlano : contém
+
+TopicoPlano "1" *-- "*" CoerenciaTopico : contém
+PosicionamentoPublico "1" *-- "*" CoerenciaTopico : contém
+
+' View Relations
+
+CandidatoListView --> BuscaCandidatoController
+CandidatoPerfilView --> CandidatoDetalheController
+
+'Layer Relation 
+"Application Layer" -up-> "Entities"
 
 @enduml
 ```
