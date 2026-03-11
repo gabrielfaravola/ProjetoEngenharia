@@ -4,7 +4,7 @@
 
 ---
 ## Codificação do Diagrama
-```
+```plantuml
 @startuml
 
 
