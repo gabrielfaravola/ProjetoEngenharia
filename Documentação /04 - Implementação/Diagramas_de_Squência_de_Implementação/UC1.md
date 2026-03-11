@@ -1,5 +1,6 @@
 # Visualizar Espectro Político
-[![](https://img.plantuml.biz/plantuml/svg/TLDHYXf14FqVc3iK2a4_zW8YiiPTWk32aX3ouqzjTwd5zdHDkdiavZOXHyWHl5YgHyVTYN4-XYcwtdlrNlNSnuGXDPKhY_ZAliQ05SHqSAJlmERgYButv0qzKOoufRdZhGT3Fb4eYx90aoJ0OC4MxV6t300ZV8sdinVv0ODbxjoWeGYZfN-Hnjln08QVTXBJjnqdAWlGHyKI6wxH9sL3RvKmoGCbT3jQ-uNu5CGv2gt28WKTahm5rRX8pUlQiS74uc65Xzmxr7aDVNJDVsKSniWRXHYKnrYJKOsr_q9Xhw1MwFnzhVKi8KNu04k_2QZ1DHfSKCnmXNljpG5Swwa9QgnyfbeYQsw7LYENC9ro5zHirfFBQSBThFKC4zXJw4OTcIwdfHstg-0z9ZgdKnOjGf5d4mes5yVX5lZYk2mwd5AqCqx0SRuzwlsoeLiq6L0MBUokDy9AAQPT4azi6TMkfN-0PU552r6txx1pjvN0gHAm1EYFltGUlHnQv42DxXqhlPaIrtwqKBBSZLrQp-9OTo7ZdhMtO6y2OFJecshSc_9TIgUKbQTTr4GDvFNpJuGAQmIs9ExuPwj4FORJakwrMN-ulm00)](https://editor.plantuml.com/uml/TLDHYXf14FqVc3iK2a4_zW8YiiPTWk32aX3ouqzjTwd5zdHDkdiavZOXHyWHl5YgHyVTYN4-XYcwtdlrNlNSnuGXDPKhY_ZAliQ05SHqSAJlmERgYButv0qzKOoufRdZhGT3Fb4eYx90aoJ0OC4MxV6t300ZV8sdinVv0ODbxjoWeGYZfN-Hnjln08QVTXBJjnqdAWlGHyKI6wxH9sL3RvKmoGCbT3jQ-uNu5CGv2gt28WKTahm5rRX8pUlQiS74uc65Xzmxr7aDVNJDVsKSniWRXHYKnrYJKOsr_q9Xhw1MwFnzhVKi8KNu04k_2QZ1DHfSKCnmXNljpG5Swwa9QgnyfbeYQsw7LYENC9ro5zHirfFBQSBThFKC4zXJw4OTcIwdfHstg-0z9ZgdKnOjGf5d4mes5yVX5lZYk2mwd5AqCqx0SRuzwlsoeLiq6L0MBUokDy9AAQPT4azi6TMkfN-0PU552r6txx1pjvN0gHAm1EYFltGUlHnQv42DxXqhlPaIrtwqKBBSZLrQp-9OTo7ZdhMtO6y2OFJecshSc_9TIgUKbQTTr4GDvFNpJuGAQmIs9ExuPwj4FORJakwrMN-ulm00)
+[![](https://img.plantuml.biz/plantuml/svg/VLH1hjem4Dr7oXr6VAc2nRy0GkZJjAgG-5BKgks6pU0CODNnfBP3IszJzGZTTSl5EZO4oASqYyYE_TwRUM-K9n_GXROsUUQ_QDkWmnfys1kIjzFgveY-jcGLFPFtkA6PqHiBYcmWbsTvXYgmWq6XAwmEltW0wE6ZFvwj-3iCFcdw1iFIaHSC1iqM5hWdDnh0mxEseN24TPw1F28OjD8DsY2CQ2iX3LoIMskpj94eqST5df6jG0JEElDOqHeLUHZExOfRMqM9TrlsuVDM1_gVnXiAQBQqj0NRuDWOSacg2CxSIisQncXrrOleY2-ANflsdp86lTThWIZajxuX9HfB-u7SJa19wBI-rIhP1G-lO6xN3YMWLW9oWdbOu4xkHgDlzQG9QYj-JmrxBVdiaqRSmcIYEwEcqvvSJ0qUfybU68EABJgWMYAKWwxiGOfSxp3GAOWyImX1HhS4kIFNtHwgpk5vDRf27dtDiuGGvAdz9DjvvUw1prxbMOSJYjJT68oEyoskdREzHnC1UPPWZxqI5a8nASKv9G5ZBMFBPRiIErWCg-W5GPvPbWrBrvVAPcR3JeUQeI90U_WfPSddYZqqFMBP7_uaRfzdmq9e8n0x_qesMdBbqJ6fgDHh-sBwNMYlv2lhZjPVydOaWsBHdOc6T68QzIYww8wX2pxDpLZSYDEeVo3Ks23eYjWSVczULj3Dp9DSJt-Qlm00)](https://editor.plantuml.com/uml/VLH1hjem4Dr7oXr6VAc2nRy0GkZJjAgG-5BKgks6pU0CODNnfBP3IszJzGZTTSl5EZO4oASqYyYE_TwRUM-K9n_GXROsUUQ_QDkWmnfys1kIjzFgveY-jcGLFPFtkA6PqHiBYcmWbsTvXYgmWq6XAwmEltW0wE6ZFvwj-3iCFcdw1iFIaHSC1iqM5hWdDnh0mxEseN24TPw1F28OjD8DsY2CQ2iX3LoIMskpj94eqST5df6jG0JEElDOqHeLUHZExOfRMqM9TrlsuVDM1_gVnXiAQBQqj0NRuDWOSacg2CxSIisQncXrrOleY2-ANflsdp86lTThWIZajxuX9HfB-u7SJa19wBI-rIhP1G-lO6xN3YMWLW9oWdbOu4xkHgDlzQG9QYj-JmrxBVdiaqRSmcIYEwEcqvvSJ0qUfybU68EABJgWMYAKWwxiGOfSxp3GAOWyImX1HhS4kIFNtHwgpk5vDRf27dtDiuGGvAdz9DjvvUw1prxbMOSJYjJT68oEyoskdREzHnC1UPPWZxqI5a8nASKv9G5ZBMFBPRiIErWCg-W5GPvPbWrBrvVAPcR3JeUQeI90U_WfPSddYZqqFMBP7_uaRfzdmq9e8n0x_qesMdBbqJ6fgDHh-sBwNMYlv2lhZjPVydOaWsBHdOc6T68QzIYww8wX2pxDpLZSYDEeVo3Ks23eYjWSVczULj3Dp9DSJt-Qlm00)
+
 ---
 ## Codificação do Diagrama
 ```plantuml
@@ -8,6 +9,10 @@ skinparam style strictuml
 skinparam sequenceMessageAlign center
 
 actor "Cidadão" as User
+
+box "View (Presentation Layer)" #MintCream
+    participant "CandidatoPerfil\nView" as View
+end box
 
 box "Interfaces (Inbound)" #GhostWhite
     participant "CandidatoDetalhe\nController" as Ctrl
@@ -21,7 +26,10 @@ box "Ports & Infrastructure" #Lavender
     participant "ConteudoRepository" as Repo <<interface>>
 end box
 
-User -> Ctrl : verEspectro(candidatoId)
+User -> View : clicar em "Ver Espectro"
+activate View
+
+View -> Ctrl : verEspectro(candidatoId)
 activate Ctrl
 
 Ctrl -> Service : classificar(candidatoId)
@@ -29,15 +37,23 @@ activate Service
 
 Service -> Repo : listarPorCandidato(candidatoId)
 activate Repo
-Repo --> Service : List<ConteudoMidia>
+Repo --> Service : List<PosicionamentoPublico>
 deactivate Repo
 
-note over Service : Algoritmo de análise\nde posicionamentos\n(CategoriaEspectroPolitico)
+note over Service
+Algoritmo de análise
+dos posicionamentos públicos
+(CategoriaEspectroPolitico)
+end note
 
-Service --> Ctrl : CategoriaEspectroPolitico (Enum)
+Service --> Ctrl : CategoriaEspectroPolitico
 deactivate Service
 
-Ctrl --> User : Renderiza mapa ideológico
+Ctrl --> View : retornarCategoria(espectro)
 deactivate Ctrl
+
+View --> User : Renderiza mapa ideológico
+deactivate View
+
 @enduml
 ```
