@@ -4,103 +4,155 @@
 ---
 ## Codificação do Diagrama
 ```plantuml
+
 @startuml
 
+skinparam packageStyle rectangle
+skinparam linetype ortho
+left to right direction
+
+package "Interfaces (Inbound Adapters)" {
+
+class BuscaCandidatoController {
+ consultaCandidatoService: ConsultaCandidatoService
+
+ buscarCandidato(id: int)
+ listarCandidatos()
+}
+
+class CandidatoDetalheController {
+ planoService: PlanoGovernoService
+ espectroService: ClassificacaoEspectroService
+ coerenciaService: AnaliseCoerenciaService
+
+ verPlano(candidatoId: int)
+ verEspectro(candidatoId: int)
+ verCoerencia(candidatoId: int)
+}
+
+}
+
+package "Application Layer" {
+
+class ConsultaCandidatoService {
+ candidatoRepository: CandidatoRepository
+
+ buscarCandidato(id: int): Candidato
+ listarCandidatos(): List<Candidato>
+}
+
+class PlanoGovernoService {
+ planoRepository: PlanoRepository
+ iaResumoPort: IAResumoPort
+
+ buscarPlano(candidatoId: int): PlanoDeGoverno
+ gerarOuBuscarResumo(candidatoId: int): String
+}
+
+class AnaliseCoerenciaService {
+ topicoPlanoRepository: TopicoPlanoRepository
+ conteudoRepository: ConteudoRepository
+
+ calcularIndice(candidatoId: int): IndiceCoerencia
+}
+
+class ClassificacaoEspectroService {
+ conteudoRepository: ConteudoRepository
+
+ classificar(candidatoId: int): CategoriaEspectroPolitico
+}
+
+}
+
+package "Domain Layer" {
+
+package "Entities" {
+
 class Candidato {
-    -id: int
-    -nome: String
-    -partido: String
-    -biografia: String
-    -anoEleicao: int
-    +getPlanoDeGoverno(): PlanoDeGoverno
-    +getPosicionamentos(): List<PosicionamentoPublico>
-    +getIndiceCoerencia(): IndiceCoerencia
-    +getEspectroPolitico(): EspectroPolitico
+ id: int
+ nome: String
+ partido: String
+ biografia: String
+ anoEleicao: int
 }
 
 class PlanoDeGoverno {
-    -id: int
-    -resumo: String
-    -dataPublicacao: Date
-    +getResumo(): String
-    +listarTopicos(): List<TopicoPlano>
+ id: int
+ titulo: String
+ resumo: String
+ dataPublicacao: Date
 }
 
 class TopicoPlano {
-    -id: int
-    -titulo: String
-    -descricao: String
-    -resumo: String
-    +getResumo(): String
+ id: int
+ titulo: String
+ descricao: String
+ resumo: String
 }
 
 class PosicionamentoPublico {
-    -id: int
-    -tema: String
-    -data: Date
-    -descricao: String
-    +listarConteudos(): List<ConteudoMidia>
+ id: int
+ tema: String
+ descricao: String
+ data: Date
+ fonte: String
 }
 
 class ConteudoMidia {
-    -id: int
-    -titulo: String
-    -url: String
-    -dataPublicacao: Date
-    +getResumoIA(): String
-}
-
-class Video {
-    -duracao: int
-    -plataforma: String
-    +reproduzir(): void
-}
-
-class Postagem {
-    -redeSocial: String
-    -texto: String
-    +exibirPost(): String
+ id: int
+ titulo: String
+ url: String
+ tipo: String
+ dataPublicacao: Date
 }
 
 class IndiceCoerencia {
-    -id: int
-    -indiceGeral: float
-    -dataCalculo: Date
-    +calcularIndice(): float
-    +listarCoerenciaTopicos(): List<CoerenciaTopico>
+ id: int
+ indiceGeral: float
+ dataCalculo: Date
 }
 
 class CoerenciaTopico {
-    -id: int
-    -topico: String
-    -indice: float
-    +calcularCoerencia(): float
+ id: int
+ topico: String
+ indice: float
 }
 
-class EspectroPolitico {
-    -id: int
-    -eixoEconomico: float
-    -eixoSocial: float
-    +calcularPosicionamento(): void
+enum CategoriaEspectroPolitico {
+ EXTREMA_ESQUERDA
+ ESQUERDA
+ CENTRO_ESQUERDA
+ CENTRO
+ CENTRO_DIREITA
+ DIREITA
+ EXTREMA_DIREITA
 }
 
-ConteudoMidia <|-- Video
-ConteudoMidia <|-- Postagem
+}
 
-Candidato "1" -- "1" PlanoDeGoverno
-PlanoDeGoverno "1" -- "*" TopicoPlano
+package "Ports (Interfaces)" {
 
-Candidato "1" -- "*" PosicionamentoPublico
-PosicionamentoPublico "1" -- "*" ConteudoMidia
+interface CandidatoRepository {
+ buscarPorId(id: int): Candidato
+ listar(): List<Candidato>
+}
 
-Candidato "1" -- "1" EspectroPolitico
+interface PlanoRepository {
+ buscarPorCandidatoId(candidatoId: int): PlanoDeGoverno
+ salvar(plano: PlanoDeGoverno)
+}
 
-Candidato "1" -- "1" IndiceCoerencia
-IndiceCoerencia "1" -- "*" CoerenciaTopico
+interface TopicoPlanoRepository {
+ listarPorPlano(planoId: int): List<TopicoPlano>
+}
 
-TopicoPlano "1" -- "*" CoerenciaTopico
+interface ConteudoRepository {
+ listarPorCandidato(candidatoId: int): List<ConteudoMidia>
+}
 
-PosicionamentoPublico "1" --- "*" CoerenciaTopico
+interface IAResumoPort {
+ gerarResumo(plano: PlanoDeGoverno): String
+}
 
-@enduml
+}
 ```
