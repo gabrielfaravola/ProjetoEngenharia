@@ -21,7 +21,7 @@ autonumber "<b>[0]"
 
 User -> UI : Visualiza card ou cabeçalho do perfil
 activate UI
-UI --> User : Identifica posicionamento (Partido/Histórico)
+UI --> User : Exibe posicionamento (Partido/Histórico)
 deactivate UI
 
 User -> UI : Clica no ícone "Espectro Político"
