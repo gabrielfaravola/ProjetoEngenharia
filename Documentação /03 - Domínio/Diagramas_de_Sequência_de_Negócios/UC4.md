@@ -1,11 +1,11 @@
 # Visualizar Resumo do Plano de Governo
 
-[![](https://img.plantuml.biz/plantuml/svg/RP9DQiCm48Nt1jzXyBRa0bcKb59AeD3Y9WUOI4CGs9AGvD3hTDbrZ-2BLN-MVvgbf7dVl3UZWtLetD1tTLLNo9moSBO36g72XVPlWWcDqa7pCNvVXKJW2fvHSi7HgGRGmlcugLm_bzEMrw5Km0bUrOsCJCNnSbDu6d-rO2eqZi-nyAJ2NJ2P_SBkqJk1FNnIHqmexxHfoGvz5EgfsJKtYsd53Hr5_nvp38HYDe1Kvpqu_2TUQ1VXwceMUrAAjuSdHjOMXW8sAmebf-PqdvjG2-RxnOq_FPWKJniXmwowLMqQa2zkYGsQ389BSxHb7Wi7ypYpRhTezoRyBmdv2u6fgRjTsPunsSUqb7PZ5HuclNTZ2tW5orD9gmcWlEWzl7o92qtnxsntXKdhFP3a_fl_0G00)](https://editor.plantuml.com/uml/RP9DQiCm48Nt1jzXyBRa0bcKb59AeD3Y9WUOI4CGs9AGvD3hTDbrZ-2BLN-MVvgbf7dVl3UZWtLetD1tTLLNo9moSBO36g72XVPlWWcDqa7pCNvVXKJW2fvHSi7HgGRGmlcugLm_bzEMrw5Km0bUrOsCJCNnSbDu6d-rO2eqZi-nyAJ2NJ2P_SBkqJk1FNnIHqmexxHfoGvz5EgfsJKtYsd53Hr5_nvp38HYDe1Kvpqu_2TUQ1VXwceMUrAAjuSdHjOMXW8sAmebf-PqdvjG2-RxnOq_FPWKJniXmwowLMqQa2zkYGsQ389BSxHb7Wi7ypYpRhTezoRyBmdv2u6fgRjTsPunsSUqb7PZ5HuclNTZ2tW5orD9gmcWlEWzl7o92qtnxsntXKdhFP3a_fl_0G00)
+[![](https://img.plantuml.biz/plantuml/svg/bP0n3i8m34NtIBc3bRqNw82wC7G5zG0cDIXI6aU9Mt4lZi35IAeoLC30Pjd-xt-xou99vibhfHLQuGH3dZ4vherOPiwwY470z44eNT6I0Smmz7LXsuNcK1hGmfayMSS1mPmepnF3o10zXb8Gt7YX5DYiJcv1eHLJb4q5RAmMZdTt8KW_0LgDj2Dy2SA-11TyKs8vJ9wFw2pdl-ptmWzVhJeAO_dV2m00)](https://editor.plantuml.com/uml/bP0n3i8m34NtIBc3bRqNw82wC7G5zG0cDIXI6aU9Mt4lZi35IAeoLC30Pjd-xt-xou99vibhfHLQuGH3dZ4vherOPiwwY470z44eNT6I0Smmz7LXsuNcK1hGmfayMSS1mPmepnF3o10zXb8Gt7YX5DYiJcv1eHLJb4q5RAmMZdTt8KW_0LgDj2Dy2SA-11TyKs8vJ9wFw2pdl-ptmWzVhJeAO_dV2m00)
 
 ---
 ## Descrição do Diagrama
 
-O fluxo começa quando o usuário, na página do candidato, seleciona a seção “Resumo do plano de governo”. A interface então acessa o plano de governo do candidato, que fornece o resumo principal e os tópicos do plano com seus respectivos resumos. Em seguida, o sistema retorna essas informações para a página do candidato, que exibe ao usuário o resumo geral do plano e os principais tópicos discutidos, incluindo também os tópicos menos abordados.
+Este diagrama de sequência ilustra o fluxo de interação entre um usuário e uma interface para consulta de dados políticos. O processo foca na experiência de navegação, onde o usuário solicita primeiro uma visão geral do plano de governo e, logo em seguida, opta por uma visualização mais organizada e segmentada por tópicos, destacando a capacidade do sistema de entregar informações de forma direta e estruturada.
 
 ---
 ## Codificação do Diagrama
@@ -14,34 +14,18 @@ O fluxo começa quando o usuário, na página do candidato, seleciona a seção 
 
 actor Usuario
 
-participant "Página do Candidato" as UI
-participant "Candidato" as Candidato
-participant "Plano de Governo" as Plano
-participant "Tópico do Plano" as Topico
+participant "Interface" as UI
 
 Usuario -> UI : Seleciona "Resumo do plano de governo"
 activate UI
-
-UI -> Candidato : Solicita plano de governo
-activate Candidato
-
-Candidato -> Plano : Acessa plano do candidato
-activate Plano
-deactivate Candidato
-
-Plano -> Plano : Obtém resumo principal
-
-Plano -> Topico : Recupera tópicos do plano
-activate Topico
-
-Topico --> Plano : Lista de tópicos com resumos
-deactivate Topico
-
-Plano --> UI : Resumo principal + resumos dos tópicos
-deactivate Plano
-
 UI --> Usuario : Exibe resumo do plano de governo
 deactivate UI
+
+Usuario -> UI : Solicita resumo por tópicos
+activate UI
+UI --> Usuario : Exibe resumo por tópicos
+deactivate UI
+
 
 @enduml
 ```
