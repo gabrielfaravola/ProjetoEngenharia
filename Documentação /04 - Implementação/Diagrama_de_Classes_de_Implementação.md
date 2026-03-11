@@ -35,7 +35,7 @@ O sistema é organizado em camadas:
 
   - Implementações concretas das interfaces de portas (RepositoryImpl, IAResumoAdapter) que interagem com bancos de dados ou serviços externos.
 
-### 6. View
+#### 6. View
 
  - Classes que representam a interface gráfica do usuário
 
