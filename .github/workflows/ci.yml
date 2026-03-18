@@ -1,0 +1,67 @@
+
+name: CI 
+
+on:
+  pull_request:
+    branches: [ "main" ]
+  push:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      java: ${{ steps.filter.outputs.java }}
+      python: ${{ steps.filter.outputs.python }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detectar mudanças
+        id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            java:
+              - 'Sistema (JAVA)/**'
+            python:
+              - 'AI (Python)/**'
+
+  java:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.java == 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build + Test Java
+        working-directory: 'Sistema (JAVA)/app/**'
+        run: mvn clean install
+
+  python:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.python == 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        working-directory: 'AI (Python)/app/**'
+        run: pip install -r requirements.txt
+
+      - name: Rodar testes
+        working-directory: 'AI (Python)/app/**'
+        run: pytest
