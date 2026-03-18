@@ -25,9 +25,9 @@ jobs:
         with:
           filters: |
             java:
-              - 'Sistema (JAVA)/app/**'
+              - 'Sistema \(JAVA\)/app/**'
             python:
-              - 'AI (Python)/app/**'
+              - 'AI \(Python\)/app/**'
 
   java:
     needs: detect-changes
@@ -43,7 +43,7 @@ jobs:
           java-version: '17'
 
       - name: Build + Test Java
-        working-directory: 'Sistema (JAVA)/app/**'
+        working-directory: 'Sistema (JAVA)/app/'
         run: mvn clean install
 
   python:
@@ -59,7 +59,7 @@ jobs:
           python-version: '3.11'
 
       - name: Instalar dependências
-        working-directory: 'AI (Python)/app/**'
+        working-directory: 'AI (Python)/app/'
         run: pip install -r requirements.txt
 
       - name: Rodar testes
