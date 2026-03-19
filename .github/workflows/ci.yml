@@ -1,5 +1,5 @@
 
-name: CI 
+name: CI-CD
 
 on:
   pull_request:
@@ -15,7 +15,6 @@ jobs:
   #1. Detecta Mudança em Determinados Diretórios
   detect-changes:
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
     
     outputs:
       java: ${{ steps.filter.outputs.java }}
@@ -75,7 +74,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Rodar testes
-        working-directory: 'AI (Python)/app/**'
+        working-directory: 'AI (Python)/app/'
         run: pytest
 
 
@@ -124,8 +123,8 @@ jobs:
             
     - name: Push Imagem Java
       run: |
-          docker push ${{ secrets.DOCKER_HUB_USER }}/python-app:${{ needs.prepare.outputs.tag }}
-          docker push ${{ secrets.DOCKER_HUB_USER }}/python-app:latest
+          docker push ${{ secrets.DOCKER_HUB_USER }}/system-eleic:${{ needs.prepare.outputs.tag }}
+          docker push ${{ secrets.DOCKER_HUB_USER }}/system-eleic:latest
 
 
 
@@ -145,7 +144,7 @@ jobs:
             
     - name: Push Imagem Python
       run: |
-          docker push ${{ secrets.DOCKER_HUB_USER }}/python-app:${{ needs.prepare.outputs.tag }}
-          docker push ${{ secrets.DOCKER_HUB_USER }}/python-app:latest
+          docker push ${{ secrets.DOCKER_HUB_USER }}/ai-sys-eleic:${{ needs.prepare.outputs.tag }}
+          docker push ${{ secrets.DOCKER_HUB_USER }}/ai-sys-eleic:latest
 
   
