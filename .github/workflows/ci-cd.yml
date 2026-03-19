@@ -82,7 +82,7 @@ jobs:
   #4. PREPARAR VERSÃO DA IMAGEM DOCKER
   prepare:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
 
     outputs:
       tag: ${{ steps.vars.outputs.tag }}
@@ -96,7 +96,7 @@ jobs:
   #5. LOGIN NO DOCKER HUB
   docker-login:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     
     steps:
       - name: Login to Docker Hub
