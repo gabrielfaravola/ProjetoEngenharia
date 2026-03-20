@@ -52,6 +52,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
+          cache: 'maven'
 
       - name: Build + Test Java
         working-directory: 'sistema-java/app/'
@@ -70,6 +71,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Instalar dependências
         working-directory: 'ai-python/app/'
