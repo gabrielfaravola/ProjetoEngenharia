@@ -1,5 +1,5 @@
 # Buscar Candidatos
-[![](https://img.plantuml.biz/plantuml/svg/XLJBZjem5Dr7oZzSqKLX4VMXhX124pAKHW8I0TFfrYItO3NOgUrGPhPTz4FwAVnORPC70MQwGI6-vvnxZW_SIKM4AdQPwyWVbEL4a1r8zPIX_XGqkJh2dmMo16Se9TcWdz4DWmIPGd4-5cjIcj2SC1MJDALi0v_Ulp0me-oHfceB7zeZ8twei1_rWUkGH741dO2c93t-vHqW4Xwa4NQTDJz0vol5Nz2D1Kgz456KCvYI9nIz3hpHAYeGI7QkapVQcesmL1CgFgLI6G9BQnvS1raAchZc3utDxoH12TsGhNd1KaCzsNAf7hTKuGNtg909gGK2pfJWMOR2IWHAPDSIVfvdD3dRNVFha1CSPSKblIQKHQOQXIMAlHwrzENpjKBCXRBxLrwCXIdPwpaJvUrm5fXpINNyJvRSV8N1W5OSms5BvorudWVXV3LU-CS_nz-HVWw3q9_2_HZyOBnSHj0DllWp_zwth-AmPo2kOwuJlA4D1_eGRCcEf0HID3FGdOnNy2wfbf8zsmcw9mhBE5t78ZM3xK8VADDcI4QVYJ1lkkUGqoNRGQ_H5AXjCWvQzZIGuWMY4j4OksyVTDq4RiXDJBNOAPJFquTl4KIBS1BEJtd4YyWaui_6yrNKJg7qW0UwfiBqixbgUSD9vQMsaXc8U05p6LXPcF_1wbwvJeNGO5k82jcQDoUkOy-zbehnCwX5XgtCJg0pXSRJQx2ptUeRAZDy3LObKJUXl5LXVnAcEf0GaKfJmwPyDujnfo7w7_CV)](https://editor.plantuml.com/uml/XLJBZjem5Dr7oZzSqKLX4VMXhX124pAKHW8I0TFfrYItO3NOgUrGPhPTz4FwAVnORPC70MQwGI6-vvnxZW_SIKM4AdQPwyWVbEL4a1r8zPIX_XGqkJh2dmMo16Se9TcWdz4DWmIPGd4-5cjIcj2SC1MJDALi0v_Ulp0me-oHfceB7zeZ8twei1_rWUkGH741dO2c93t-vHqW4Xwa4NQTDJz0vol5Nz2D1Kgz456KCvYI9nIz3hpHAYeGI7QkapVQcesmL1CgFgLI6G9BQnvS1raAchZc3utDxoH12TsGhNd1KaCzsNAf7hTKuGNtg909gGK2pfJWMOR2IWHAPDSIVfvdD3dRNVFha1CSPSKblIQKHQOQXIMAlHwrzENpjKBCXRBxLrwCXIdPwpaJvUrm5fXpINNyJvRSV8N1W5OSms5BvorudWVXV3LU-CS_nz-HVWw3q9_2_HZyOBnSHj0DllWp_zwth-AmPo2kOwuJlA4D1_eGRCcEf0HID3FGdOnNy2wfbf8zsmcw9mhBE5t78ZM3xK8VADDcI4QVYJ1lkkUGqoNRGQ_H5AXjCWvQzZIGuWMY4j4OksyVTDq4RiXDJBNOAPJFquTl4KIBS1BEJtd4YyWaui_6yrNKJg7qW0UwfiBqixbgUSD9vQMsaXc8U05p6LXPcF_1wbwvJeNGO5k82jcQDoUkOy-zbehnCwX5XgtCJg0pXSRJQx2ptUeRAZDy3LObKJUXl5LXVnAcEf0GaKfJmwPyDujnfo7w7_CV)
+![](https://www.plantuml.com/plantuml/png/VP91JXmz48NtFaLfMFoWNoqcAAi8ZO1MWaWWZ20HcsngsfMc5BVTiTq8SfieYno4YwLiy3JJ83Qj6TLxttjs-I14z77eZ0e_sFReiOCGxmp9rtCpdT3FWMn3PnG2jdHekBNGa8tadwYMGkI6UxHnYLgpRU7j_ENv6Tihrl4QtcmeZjnjSUxDbS8cEW-pcZNg-pzk1XZWQv1CjNAtCFlWdJImUWPRmekr9-nKFuQC2hYYrJUxNQFLmehkb8DKR6ad8xDA9PbW7zadulFViQ40soTsvGQP7YvFnB1rVEr2lBhcI9jXHqDeS1rH2zCxOyZdZ3fwCuaux7l33KPs5axnBWctv6OREZB312smC9WuqY_9tuWoenz_J-XBvwDq7y-Hgf_YZQZ8J-Y5Ua6z2noTlylWz1VszxaW5einup-egWfgz9vQxCX61so5Y0OqGd__ksMBIQFImg1QFDmol8FK9Q1VQpH1Kmg4j7A-mKYFItamLM9F677JBQy8rfLAgDAqwImDB-JbSk3xl_9-KZF38KuoNsmPd15mHF_WQAbxlMXfkiYR5i3n-o-mYptllk396gNILnnbWMBAMRvUExPtHazPiofoSUOD5TiJSHweFAqs0jB3tr_p5qhJfcM4bvEyvYdWSfGdzxStdyFv9_WVFbwUVnRBvEZFzkhpk-HV20rw7IQN_Mox1o8VElCF)
 
 ---
 ## Codificação do Diagrama
@@ -13,11 +13,11 @@ skinparam BoxPadding 20
 
 actor "Cidadão" as User
 
-box "View (Presentation Layer)" #MintCream
-participant "CandidatoListView" as View
+box "Frontend" #MintCream
+participant "Frontend Web\n(CandidatoListPage)" as Front
 end box
 
-box "Interfaces (Inbound)" #GhostWhite
+box "Interfaces (Inbound API)" #GhostWhite
 participant "BuscaCandidatoController" as Ctrl
 end box
 
@@ -29,23 +29,17 @@ box "Ports (Interfaces)" #Lavender
 participant "CandidatoRepository" as Repo <<interface>>
 end box
 
-' --- INTERAÇÃO INICIAL DE ACESSO (CHAMADA DE API) ---
-User -> Ctrl : Chamada de API (GET /candidatos)
-activate Ctrl
+' --- Carregamento inicial da página ---
+User -> Front : acessar página de candidatos
+activate Front
+Front --> User : exibe interface inicial
+deactivate Front
 
-Ctrl -> View : inicializarView()
-activate View
-View --> Ctrl : retorno da View
-deactivate View
+' --- Requisição da lista de candidatos ---
+User -> Front : solicitar listagem de candidatos
+activate Front
 
-Ctrl --> User : entrega da View
-deactivate Ctrl
-
-' --- FLUXO ORIGINAL DE PROCESSAMENTO ---
-User -> View : exibirListaCandidatos()
-activate View
-
-View -> Ctrl : listarCandidatos()
+Front -> Ctrl : GET /api/candidatos
 activate Ctrl
 
 Ctrl -> Service : listarCandidatos()
@@ -59,11 +53,11 @@ deactivate Repo
 Service --> Ctrl : List<Candidato>
 deactivate Service
 
-Ctrl --> View : List<Candidato>
+Ctrl --> Front : 200 OK + JSON
 deactivate Ctrl
 
-View --> User : renderizar cards de candidatos
-deactivate View
+Front --> User : renderiza cards de candidatos
+deactivate Front
 
 @enduml
 ```
