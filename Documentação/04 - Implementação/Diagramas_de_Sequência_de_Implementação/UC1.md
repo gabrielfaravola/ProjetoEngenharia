@@ -1,5 +1,5 @@
 # Visualizar Espectro Político
-[![](https://img.plantuml.biz/plantuml/svg/ZLInRjim4Dq5w1yExb1dCDAXan4OKPqq4E34WjiaNS_InIPAaof9kKcBJXtw8Ptx0rtzOpqoaYB5DTf582M-z-xUFUhKEZIksiWuiX-5Aj7W1gnxaCHF8_AzJ_If8fNJ9LcBAqgaM2d8IJaotMCPaufSbAXSXaKXr0fUlugZECBSQGE3gIYmsFtK0q0BrzQ3usYfxs5m8-Wp33D3badH2QrWXWzaZWRmub8eDpM4cpWgdmIO3LN1X4vdPEw4z1I1s2_YY5G1JDqgfBxOEyp9mZ1LIrsfmfDVhBLrjslXw13x6JcKQvfgvOoMaamGcJeZzqMIifGYxzJF2cnMJczajISWqLfnnyTprEUsf9pvtv7Pyl4WKQ_tLJ9jNEYYwSWtCiCjd_EMzbMuRAeAlQ1IMy5JU0ZSVWid9wAXc4nwCYzXD1h1rVmcWVJg_VaYsVtOVP_pEfscoSn_Z2C_FnXDWXCm1b-7HGFNYnaSbs4Ynrz5yIqCNspHKUrP70K48yFGno0KLujIV47ZtmoFEf37MOQ3eoUjwHetM20K14cMnb51pm2D1aD2cMFWM1bQ8VmbD3ryK-EZ0szdrn_cC5-a5-aLzpticd6Mm4rwVdlKTwFkYUx5KfXcgiEyKKsB_UwQ_jhsjlHFv7ChwwmmE6zZPGw1ss35KODZYX29CKZX_mqSiTQfGpGUu3a2SDGhOiOa9na7BkURW1isNsVLaY-2dlJSRYYKvetclfzgInH7mY9e2sMFYFUxtu7BCfU6jZeW3WJdUICKWgsGtM6DbJO26pipBGNV3VqOTg_QCw6JiCF8JlaT8zkyrG7uFu9cZ6t0wxIQS9NzZG2gyUo2tFtQOsWYTCe8_cd_0G00)](https://editor.plantuml.com/uml/ZLInRjim4Dq5w1yExb1dCDAXan4OKPqq4E34WjiaNS_InIPAaof9kKcBJXtw8Ptx0rtzOpqoaYB5DTf582M-z-xUFUhKEZIksiWuiX-5Aj7W1gnxaCHF8_AzJ_If8fNJ9LcBAqgaM2d8IJaotMCPaufSbAXSXaKXr0fUlugZECBSQGE3gIYmsFtK0q0BrzQ3usYfxs5m8-Wp33D3badH2QrWXWzaZWRmub8eDpM4cpWgdmIO3LN1X4vdPEw4z1I1s2_YY5G1JDqgfBxOEyp9mZ1LIrsfmfDVhBLrjslXw13x6JcKQvfgvOoMaamGcJeZzqMIifGYxzJF2cnMJczajISWqLfnnyTprEUsf9pvtv7Pyl4WKQ_tLJ9jNEYYwSWtCiCjd_EMzbMuRAeAlQ1IMy5JU0ZSVWid9wAXc4nwCYzXD1h1rVmcWVJg_VaYsVtOVP_pEfscoSn_Z2C_FnXDWXCm1b-7HGFNYnaSbs4Ynrz5yIqCNspHKUrP70K48yFGno0KLujIV47ZtmoFEf37MOQ3eoUjwHetM20K14cMnb51pm2D1aD2cMFWM1bQ8VmbD3ryK-EZ0szdrn_cC5-a5-aLzpticd6Mm4rwVdlKTwFkYUx5KfXcgiEyKKsB_UwQ_jhsjlHFv7ChwwmmE6zZPGw1ss35KODZYX29CKZX_mqSiTQfGpGUu3a2SDGhOiOa9na7BkURW1isNsVLaY-2dlJSRYYKvetclfzgInH7mY9e2sMFYFUxtu7BCfU6jZeW3WJdUICKWgsGtM6DbJO26pipBGNV3VqOTg_QCw6JiCF8JlaT8zkyrG7uFu9cZ6t0wxIQS9NzZG2gyUo2tFtQOsWYTCe8_cd_0G00)
+![](https://www.plantuml.com/plantuml/png/TPFFJXH14CRl_HILvI34R9OOJuPiM5Sago0Jq73nKZjTB1LxkyRkdWreV1ZZmPClu7LVp9fX_i0W5x9al-zNrVLzUnWJXbIkdObVs1SOS0qntJhIlu7puJVqjIIVqod5Y2kQELvvoCad2lTKcH8vvm9zoj1QzYjukMyCvaa2ZEPiqMv_oGWmmgUeJhEK6nYz3Q8SRqUmSye-pGFXsXGzgbV09Iq_-zqvUgki91c5AtQPBhHNGskTgOGARkWBdrI5EKNONVYbbFhjB5keOUVuMcAwlEP43yTr_3UKq5tJNAb1dADGJvcdu0P3PaNXECV4uk44RoaeNM-KqsjN3k4EO-GhLUSeHx6WNDaN53Qghl7Dvy64J4BI5_IlgHvmWXjLKHXC41MLLiwfaCX9mctDhVw5WmDk2TDfF-8PZCTZc6C8jC8r-IJ0Ne7em28KsvyhzbXfJ9KRZATtfuPNKAqICNGQIr3KgLIfymOJDQdS6SPghH3gf1jU4dJhj0EDfO6psUvSAyYHjx-rGjKOYrOYM05gZlZV_Q8unIOCiE5OekDls11wut3LTjTf7RL2Zey-mWGBdkHjC-BaEziVayU4kXoczgc_oL8HUHTxsEqe2xlNERlSJMjIVvMPcXt7X44hq3Np2KQbDwPsZH-CFr72GIPHRo7-Bk6iNEffPAe77_Yzw4VPKEXscddK7H0aGl404ZNulpKd6YlGRGK4bXA5TTK9lRkPAtubWR6jVAR19FNL9TI9zn_UN_vfcwNXvTgptql_nVu-dBs7v_3kuko3MWOnFUfag7zEsf6-L8MuxPzcug0dXwekr-uV)
 
 ---
 ## Codificação do Diagrama
@@ -11,11 +11,11 @@ skinparam ParticipantPadding 40
 
 actor "Cidadão" as User
 
-box "View (Presentation Layer)" #MintCream
-participant "CandidatoPerfilView" as View
+box "Frontend" #MintCream
+participant "Frontend Web\n(CandidatoPerfilPage)" as Front
 end box
 
-box "Interfaces (Inbound)" #GhostWhite
+box "Interfaces (Inbound API)" #GhostWhite
 participant "CandidatoDetalheController" as Ctrl
 end box
 
@@ -27,23 +27,17 @@ box "Ports (Interfaces)" #Lavender
 participant "ConteudoRepository" as Repo <<interface>>
 end box
 
-' --- NOVA INTERAÇÃO INICIAL ---
-User -> Ctrl : acessar URL /perfil/{id}
-activate Ctrl
+' --- Carregamento inicial da página ---
+User -> Front : acessar página de perfil
+activate Front
+Front --> User : exibe interface inicial
+deactivate Front
 
-Ctrl -> View : inicializarView()
-activate View
-View --> Ctrl : Chamada de API
-deactivate View
+' --- Requisição de dados do espectro ---
+User -> Front : solicitar visualização do espectro
+activate Front
 
-Ctrl --> User : entrega CandidatoPerfilView
-deactivate Ctrl
-
-' --- FLUXO ORIGINAL (INTERAÇÃO DA VIEW) ---
-User -> View : exibirEspectro(candidatoId)
-activate View
-
-View -> Ctrl : verEspectro(candidatoId)
+Front -> Ctrl : GET /api/candidatos/{id}/espectro
 activate Ctrl
 
 Ctrl -> Service : classificar(candidatoId)
@@ -64,11 +58,11 @@ end note
 Service --> Ctrl : CategoriaEspectroPolitico
 deactivate Service
 
-Ctrl --> View : CategoriaEspectroPolitico
+Ctrl --> Front : 200 OK + JSON
 deactivate Ctrl
 
-View --> User : renderizar espectro político
-deactivate View
+Front --> User : renderiza espectro político
+deactivate Front
 
 @enduml
 ```
