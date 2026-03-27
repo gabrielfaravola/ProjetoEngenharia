@@ -1,5 +1,5 @@
 # Visualizar Resumo de Plano de Governo
-[![](https://img.plantuml.biz/plantuml/svg/VLNBRXen5DsFDFzmHHU51Uf3NQ48PJ9GEXAF4IHDjsRc1jmQczg69jbsqU-e-YdyMAyz3ruXBD3WkUUSUu-FpRMnJDlDIeI1-S7bcccs0cEV1DAtvjdPA_ovGPdX28rX2um4NqZ8K5hKXsKfaVAChvcqASjpBXVmwVs5WX6NzpotI_XmN7AZ7YliHteH1YopIaCZvZdBT_zK0vY1E-E4ms2k7g7nbUClQAOQ3JN4B5SIXkm9TQi1RqZ5nXhPAWpMUsrYOp8dGgjIr0zSE0fFx1x206KEH5qh96xG1vQXWMOYvseZSqS-M2fZxvVSuYNs7becbXWhQRKI0hKNYQqMvoBHUYruTj0_AP3H6Tw8pQb0AfXK0xL5BTKCzPQgF7FvV4wUAcrzyzKWhlyXsrATS_ASV8fhPJWv_-I9tK-ukk8Lljiz0INH5CrcfPoGHoJHQVr1Js-XtMv3ChxjJwFTdztl2JqdSH8DeTU7AExFPXDenb-YKTIB_5AQj1ma3DpEGxlhFOGEn4ksOZc375qDD0VzMtYtTWEq5uKzBPyWlcKMI-F3m8E9n2Ud0rpI64pmPwRTIlCGKWJ25xRtiXh96Qc0b8k274yGbGXXVCiTe71gNB0NCLLZXI-VXtVV9Z2P9eDaN5YIJYVEb6ZK7zzEZeqePy17FkVQRrqpg-ANvEUZLCFKiv1Bhy9EJIipHiW5QgOdcvkDoPWkjlyIIHtCCAZmHELJrO6v9w3an7lm9I872GCFR1yrusVeONaeZjmjC4GYBEsSQnE-x_uwoumxka2VkgczBpEw2EaIQXQ3KGye35PuBWkqF2FekkINtfIU-3osYhgwgIGg5gZwU91ATwosgfGhiGSZEVIPS6cdOMBBTArAn-x8zbScF10usB0wo6NK2jYB-QtFIPbvxUyNTx0gut85lh4NZymrbTC_pty0)](https://editor.plantuml.com/uml/VLNBRXen5DsFDFzmHHU51Uf3NQ48PJ9GEXAF4IHDjsRc1jmQczg69jbsqU-e-YdyMAyz3ruXBD3WkUUSUu-FpRMnJDlDIeI1-S7bcccs0cEV1DAtvjdPA_ovGPdX28rX2um4NqZ8K5hKXsKfaVAChvcqASjpBXVmwVs5WX6NzpotI_XmN7AZ7YliHteH1YopIaCZvZdBT_zK0vY1E-E4ms2k7g7nbUClQAOQ3JN4B5SIXkm9TQi1RqZ5nXhPAWpMUsrYOp8dGgjIr0zSE0fFx1x206KEH5qh96xG1vQXWMOYvseZSqS-M2fZxvVSuYNs7becbXWhQRKI0hKNYQqMvoBHUYruTj0_AP3H6Tw8pQb0AfXK0xL5BTKCzPQgF7FvV4wUAcrzyzKWhlyXsrATS_ASV8fhPJWv_-I9tK-ukk8Lljiz0INH5CrcfPoGHoJHQVr1Js-XtMv3ChxjJwFTdztl2JqdSH8DeTU7AExFPXDenb-YKTIB_5AQj1ma3DpEGxlhFOGEn4ksOZc375qDD0VzMtYtTWEq5uKzBPyWlcKMI-F3m8E9n2Ud0rpI64pmPwRTIlCGKWJ25xRtiXh96Qc0b8k274yGbGXXVCiTe71gNB0NCLLZXI-VXtVV9Z2P9eDaN5YIJYVEb6ZK7zzEZeqePy17FkVQRrqpg-ANvEUZLCFKiv1Bhy9EJIipHiW5QgOdcvkDoPWkjlyIIHtCCAZmHELJrO6v9w3an7lm9I872GCFR1yrusVeONaeZjmjC4GYBEsSQnE-x_uwoumxka2VkgczBpEw2EaIQXQ3KGye35PuBWkqF2FekkINtfIU-3osYhgwgIGg5gZwU91ATwosgfGhiGSZEVIPS6cdOMBBTArAn-x8zbScF10usB0wo6NK2jYB-QtFIPbvxUyNTx0gut85lh4NZymrbTC_pty0)
+![](https://www.plantuml.com/plantuml/png/ZLHDRnen4BtxLup8eQ0AGQEUeWY5a3QYpGTAMkNIox2UWbjZRss3abRzCL4F_I7yiOwzU84DXt90k_9xRzxCFE-P3-Z2Sg65_wvCYGuNuCEJ9lvtgcYUq8ybcOAkoNkSqL2hcO62J22tWvgmeYfKYIPCK4fbPl2sV_ZyMfa79SCStkmXpkrZPXxtXS0YM0UjaP8ertzi2z33PyyrnTG-Gkkzi-p0o1OSiLuOESA5ABT5jWXueEaNqnwXaQmLx8JSLwKdt4edYIQSY40MtgYFJM0K5kIXFJPJk-JJuMJCXAFBkVNXOQu2xPUhzIyee9xJY5MTrPfSgZ8AJZUA3CjIgmA3iWQky2a2ZtYw1PthPKDyej7OIxiYP-mzkHM3akhckI4yiIuauxc9wFiALumYTq3uZahh5O_xAOd6LpWzLPa-6EnpniCxyik5ZMKIOJnim6ixhw3RxS88dQCPBiW42ygm46gG2ENwUQOCHeo8guNkeDe6d42qxT7L66cXo1EEsL0h3BJPNSNfCZkgC9aUrPIWTfHh2adxp6pmZYEkl5h_vQ35IYxr5v_AE1-G1BDg-0UzUgjPFw1h4fj6izD1YWCpBzzzWXwMgbVtvdk_bFpTI_JkfcWloUwefJ29-CzQEGGiDoE7xdPvllG5kcf9xLfvB3krGXqSaScia_P-0jF4vkMEjip3AeaX4gsxvoEbwe8sWQt7dXa2TSYZ-hP-ZkloWGJmhxQpdT5zSF6RqAxwwGZIdZ9RcOfhclH136KQI3s8DD9EWcKx34hlus6ZWLppngvo6Ygcf5rkesQUe4UzGfSBaf52_4TVafhRoIlUYTfnlm-t7-4rVBY_lM5A8n8lRe9BTrxzn6OqNzw5CuRob_yV)
 
 ---
 ## Codificação do Diagrama
@@ -13,11 +13,11 @@ skinparam BoxPadding 20
 
 actor "Cidadão" as User
 
-box "View (Presentation Layer)" #MintCream
-participant "CandidatoPerfilView" as View
+box "Frontend" #MintCream
+participant "Frontend Web\n(CandidatoPerfilPage)" as Front
 end box
 
-box "Interfaces (Inbound)" #GhostWhite
+box "Interfaces (Inbound API)" #GhostWhite
 participant "CandidatoDetalheController" as Ctrl
 end box
 
@@ -30,23 +30,17 @@ participant "PlanoRepository" as Repo <<interface>>
 participant "IAResumoPort" as IA <<interface>>
 end box
 
-' --- INTERAÇÃO INICIAL DE ACESSO (CHAMADA DE API) ---
-User -> Ctrl : Chamada de API (GET /plano-governo)
-activate Ctrl
+' --- Carregamento inicial da página ---
+User -> Front : acessar página do candidato
+activate Front
+Front --> User : exibe interface inicial
+deactivate Front
 
-Ctrl -> View : inicializarView()
-activate View
-View --> Ctrl : retorno da View
-deactivate View
+' --- Requisição do resumo do plano de governo ---
+User -> Front : solicitar resumo do plano
+activate Front
 
-Ctrl --> User : entrega da View
-deactivate Ctrl
-
-' --- FLUXO ORIGINAL DE PROCESSAMENTO ---
-User -> View : exibirPlano(candidatoId)
-activate View
-
-View -> Ctrl : verPlano(candidatoId)
+Front -> Ctrl : GET /api/candidatos/{id}/plano-governo/resumo
 activate Ctrl
 
 Ctrl -> Service : gerarOuBuscarResumo(candidatoId)
@@ -71,11 +65,11 @@ end
 Service --> Ctrl : String (Resumo)
 deactivate Service
 
-Ctrl --> View : String
+Ctrl --> Front : 200 OK + JSON
 deactivate Ctrl
 
-View --> User : renderizar resumo do plano
-deactivate View
+Front --> User : renderiza resumo do plano
+deactivate Front
 
 @enduml
 ```
