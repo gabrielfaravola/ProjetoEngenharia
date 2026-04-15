@@ -63,7 +63,6 @@ Retorne a lista reordenada mantendo a redação original. Não adicione comentá
             # ),
         )
 
-        sleep(60)
         for tentativa in range(3):
             try:
                 response = self.client.models.generate_content(
@@ -81,6 +80,8 @@ Retorne a lista reordenada mantendo a redação original. Não adicione comentá
                     sleep(300)
                     continue
                 raise e
+            
+            break
 
     
     def __ranking(self, arquivo):
@@ -105,7 +106,6 @@ Retorne a lista reordenada mantendo a redação original. Não adicione comentá
             # ),
         )
 
-        sleep(60)
         for tentativa in range(3):
             try:
                 response = self.client.models.generate_content(
@@ -123,6 +123,8 @@ Retorne a lista reordenada mantendo a redação original. Não adicione comentá
                     sleep(300)
                     continue
                 raise e
+            
+            break
     
 
     def Resumo_plano(self, arquivo=None):
@@ -144,7 +146,6 @@ Retorne a lista reordenada mantendo a redação original. Não adicione comentá
             temperature=0.2,
         )
 
-        sleep(60)
         for tentativa in range(3):
             try:
                 response = self.client.models.generate_content(
@@ -158,10 +159,12 @@ Retorne a lista reordenada mantendo a redação original. Não adicione comentá
                 if tentativa < 2:
                     metodo_atual = inspect.currentframe().f_code.co_name
                     print(f"Erro de servidor em: {metodo_atual}. Esperando 5 minutos.")
-                    
+
                     sleep(300)
                     continue
                 raise e
+            
+            break
         
 if __name__ == "__main__":
     GH = gemini_handler()
