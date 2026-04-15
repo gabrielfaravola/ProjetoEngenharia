@@ -18,5 +18,7 @@ class Settings(BaseSettings):
     api_v1_str: str = Field(default="/api/v1", description="API version 1 prefix")
     database_url: str = Field(default="", description="Database connection URL")
 
+    google_api_key: str = Field(default="", description="Chave da API de Inteligência Artificial")
+    upload_dir: str = Field(default="storage", description="Diretório base de arquivos")
 
 settings = Settings()
