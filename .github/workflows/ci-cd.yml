@@ -33,9 +33,9 @@ jobs:
         with:
           filters: |
             java:
-              - 'sistema-java/app/**'
+              - 'backend/sistema-java/app/**'
             python:
-              - 'ai-python/app/**'
+              - 'backend/ai-python/**'
 
 
 
@@ -55,7 +55,7 @@ jobs:
           cache: 'maven'
 
       - name: Build + Test Java
-        working-directory: 'sistema-java/app/'
+        working-directory: 'backend/sistema-java/app/'
         run: mvn clean install
 
 
@@ -74,11 +74,11 @@ jobs:
           cache: 'pip'
 
       - name: Instalar dependências
-        working-directory: 'ai-python/app/'
+        working-directory: 'backend/ai-python/'
         run: pip install -r requirements.txt
 
       - name: Rodar testes
-        working-directory: 'ai-python/app/'
+        working-directory: 'backend/ai-python/'
         run: pytest
 
 
@@ -117,7 +117,7 @@ jobs:
         docker build \
             -t ${{ secrets.DOCKER_HUB_USER }}/system-eleic:${{ needs.prepare.outputs.tag }} \
             -t ${{ secrets.DOCKER_HUB_USER }}/system-eleic:latest \
-            ./sistema-java/app
+            .backend/sistema-java/app
             
     - name: Push Imagem Java
       run: |
@@ -146,7 +146,7 @@ jobs:
         docker build \
               -t ${{ secrets.DOCKER_HUB_USER_PYTHON }}/ai-sys-eleic:${{ needs.prepare.outputs.tag }} \
               -t ${{ secrets.DOCKER_HUB_USER_PYTHON }}/ai-sys-eleic:latest \
-              "./ai-python/app"
+              ".backend/ai-python"
             
     - name: Push Imagem Python
       run: |
