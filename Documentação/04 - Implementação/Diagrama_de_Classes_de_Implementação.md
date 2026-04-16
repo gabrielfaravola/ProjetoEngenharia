@@ -1,7 +1,6 @@
 # Diagrama de Classe de Implementação
 
-![](https://www.plantuml.com/plantuml/png/jLXTRkCs47xdAOYyD5aW2_Gr289rRQCGi6rS9otwjc2aiKCiHGeabJROvhK7w2rwZjwa9ocfq2EA9fKiWWO8R7F-v_iu6lk3iKpRlXN4VEQoOvgrj6FrPxQ76_ieW6geBPDx0P62u1BiOmTKQNklY82TfLPHpVVtbZRSct0b2GcEwCal77uxeLy8gGKpXYwPR7Z3hFh8ZVKo9wBX3txdTrnx0KCrStg6SWC2QkUTwI1kh3hbpGNbqZvhFP7X9Gcr0RtZ8Xji8vXKf_L1imhE4gsrwLnT-cN5fG8DikRiHSqjcBvL6sNuK54BqjUQMc5LJr57AsbTGQm6GqyhUQTwsT15mpftQiwYLd_Nctfiv599gvKGe7qJ7bmpBex18BHMqlGY0k06z0ElmIaN98JGEnz9eo32H7WmzGJDfoCghC0oSG_J33kF30OVSFfUFO36Gq8Xm3AcwFto7QzPpTHwAlMb1N1GVo6PIn2MYI2q9yCVuaHG98sNXQWbCORAorzDYuGIYwuJhchhREX7zWXwf44HDzzaTBo5piMqIZyYA-B36OmZ_GpSJkovTOb7LuX_3bC4FivdCpqWbBD3cxIzeDLY_8Hv5Y0ApbOGmXAw1ytqTJ_SbT3zdDcDrLpkCVSCSp1_gpfUgqrQnMtkUBXl5lfc2i3H6V5GYReNJ5UoSO5oEJvBC2LCDdijPZl-XYmnbCwbk6GMzafpTiXYemIthYzZihaRWBc-EXFgYJ12Qf8RHL--KYlLCXxV9fIifNKvWyazrNoAuMOGAbKBI1tQCMrveyQ3Ewxsckqu6u-OL6i1hdigkE1JJEa5tGd5BBOhuVCalCko5r4yxLiHVNRviar_vmV74735BA3ZYA_pNXimjNOkoe7GvHI4vz29SsXPoJNc73AbEm_xSHHibgyWzJySeKreRzHKa7rRPgdtjVxrThl-OV5fVVFJp-ljQa7e-6wv_l5sU_qfFK31gjgkgrjtZc-2DvGyaQS92_rGSsp5HtvumFF3vzomfbzm2YfTDNEJkZ2VqJrEWfnhjAcQrqnQmyI3YzZvurHwDecAt4jYXwnzx44s-CA8ePBHDgq5nqJU9PQJ5eEkS_nDWyHF8-z-3ngVA_dIHmQdQzvECsDrNzjU0pszxcrvrylGe6exuTVTbxb0osn81atg_VyZGpg4qj1VpmLqcl80FRwP2XW3QH2m-ceY-Fzlw66x__VFlsYquX5INEtFpwzc5lNines6sILxtcH-uvwtBMxVysPp2uBlMTIdeM_312Mar1JlCh_n9jr0vOIDHRru4XILybiXoRTcpcJ68hkfpG6NBJDlC1yb0zMRJDAkUhm7V0UafmEJaDoZyVAFz-zBmt80ALNEpJqoGf2gboSMIOf5Y_mu8d6XWs8wKtpnOKdL80R2ctlUcQXmUlBjYUkQVvbPQYwe2snwJg-obicOcbT_TvBVyc8haZZqjk-2yTW-R-AN_N_-RidOy4GztVL6armMhxJrZHr-BDeUsah8ySzMbyvDQGoJvAS3D2YFDXTq-Ag1GId9VQi_xxlpg-Wh2Fa0ikbRyHy0)
-
+![](https://www.plantuml.com/plantuml/png/jLVTQXmt5BxNKnnyqtKWWTukmMIxkvI1jDwkNUXTa3NQjOX66YIDmQI-xGFqBVeSVPC-IJNAx95MbYQkeOHWp_dvpdT-vipn1-keSKCdYVqiL4yDxQ2dx3CzyXltA3aOpXnLHyaJ0oaKTuyz1stSlIQI7nmu3KOSxnsqOdGHMX529YIuQ9JZva0Pjx1er9qUL0khblPUQYylu0iXJ59huOV1ChgcgXKjTNgjbJDQIcwy1J2jx21TLDzmyo0ONyAweY44xaP0Wug5Q9SWbBia88LrYSOkBidJYGPADznHUS_FYVIIgXXyDpxzg1-uGI41RdlEd4aeZhZY81XbL6_FjMDgt73514NxbQAU85-Z0ZFoWKB81JkHR30dhvkmQse4hEZtt0wTtcahcD2ATbmvRGkslbHFINzNVIy5esFRuIDzv2RsjDgTiPG8lEUzZ-cqUVIrUYwSwMHYNshg4ZvwsNiKNM6NIvt3zgPyTkS20eAUocJS4ffLV4AUbHPDO1i-XILmv8QQwo4C_bJzajkDCq8TaNjXFf2_qxrWUfTdSLiIXxVAyQ4zRy0p6HbR9TaWgMayDyPB78CcKaAozU6lLlprB36KAL5SKyUFsWXwOh7JKZZ1T2HRUWEGwukPG1W4RAdDtYZuzYkrqHqLwTk4cgrodZEtGPejh97Yz6OGKBhZE3hGK-D4gwFWJkYZeGT1euWglPLSCAed277UKrZ2GMhgi5pPF9-5Ty8DCebdGYdYi-TBTyFTk3X2m0rrF0B7UPr7RRbbnaFK0o7aUHE-Xix0UKThqCXvOWg7iUtFes2nGWOPVX2XprJUfAXS3LrrIWFMzhVR_VQdrQVjpI-_RlUR5O7usthxy-t--bCkGCMcsM-RMo-VVa4qr3o5Vt7MngNcfnM_tzFNMfoUIyiQlk0MrAPfvpPrPJz7-D3_2ZJwDErBDgsbyi573CicrrwUHyNPos87rY5sq0KiZ3Xb4dtpN71Db24n7KmcXoxERnOa_HgDyE7xybLKIJsTuBJrZJeOQfqPc1iCXyNruAg7MsaCcgwNdW1yUnPWVXhYeidH_yTXo9TG5leLiu2WE0TLnDUE0iR0CPXwzPy7OVp_7PnEzN_--1EI4u-Gwft-zktLp3bUlglHiNHApxlCtzNpljKRUzvjxa3mDKlh5EeMDYWXjQ84oEB5MwX6h58qhDgbcw1gLBuAIQKqTPTPZzAbLcbSFSswGprAkLMlTychElOxz3Tq-dnX4bBwDBx__Tsxsh8CJSgDItkFv2s8vlMDHR9aqQEyZaYQQ33CTygO_7Ia6Yx3mDjxqTiaSRZu_i9NBVoe7pLBy87j8E2gw9cjgNdpDnVbAo_r8XdWwFjcSawlpcKuzl_-goEnu9bvVkj5bpABb_dwoeQp7_PJNO6K_i9-E_H-8EEV0-G3L-tGoNy1)
 ---
 ### Descrição 
 
@@ -35,9 +34,6 @@ O sistema é organizado em camadas:
 
   - Implementações concretas das interfaces de portas (RepositoryImpl, IAResumoAdapter) que interagem com bancos de dados ou serviços externos.
 
-#### 6. View
-
- - Classes que representam a interface gráfica do usuário
 
 ---
 
@@ -49,26 +45,10 @@ skinparam packageStyle rectangle
 skinparam linetype ortho
 left to right direction
 
-package "View" {
-
-class CandidatoListView {
-        exibirListaCandidatos()
-        selecionarCandidadto(id: int)
-    }
-
-    class CandidatoPerfilView {
-        exibirPlano(candidatoId: int)
-        exibirEspectro(candidatoId: int)
-        exibirCoerencia(candidatoId: int)
-        exibirResumoPosicionamentos(candidatoId: int)
-    }
-
-}
 
 package "Interfaces (Inbound Adapters)" {
 
 class BuscaCandidatoController {
- view: CandidatoListView
  consultaCandidatoService: ConsultaCandidatoService
 
  buscarCandidato(id: int)
@@ -79,7 +59,6 @@ class CandidatoDetalheController {
  planoService: PlanoGovernoService
  espectroService: ClassificacaoEspectroService
  coerenciaService: AnaliseCoerenciaService
- view:CandidatoPerfilView
 
  verPlano(candidatoId: int)
  verEspectro(candidatoId: int)
@@ -279,10 +258,6 @@ PlanoDeGoverno "1" *-- "*" TopicoPlano : contém
 TopicoPlano "1" *-- "*" CoerenciaTopico : contém
 PosicionamentoPublico "1" *-- "*" CoerenciaTopico : contém
 
-' View Relations
-
-CandidatoListView <-- BuscaCandidatoController
-CandidatoPerfilView <-- CandidatoDetalheController
 
 'Layer Relation 
 "Application Layer" -up-> "Entities"
