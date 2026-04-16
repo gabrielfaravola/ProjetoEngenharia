@@ -1,4 +1,4 @@
-package app.app.adapters.web.in_web;
+package app.app.adapters.in_web;
 
 import app.app.domain.Candidato;
 import org.springframework.web.bind.annotation.GetMapping;
