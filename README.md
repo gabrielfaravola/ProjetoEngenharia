@@ -8,6 +8,7 @@
 
 ---
 ## Definição da Demanda
+- [Documentação Completa](README.md#documentação)
 ### 1 Problema ou oportunidade percebida
 
   Este projeto nasce da necessidade real de democratizar o acesso à informação política no Brasil. Hoje, grande parte da população encontra dificuldades para compreender planos de governo, acompanhar posicionamentos públicos e avaliar se há coerência entre o que foi prometido e o que é efetivamente defendido ao longo do tempo. Os documentos oficiais costumam ser extensos, escritos em linguagem técnica e pouco acessível, o que afasta o cidadão comum do debate qualificado e abre espaço para discursos superficiais, emocionais ou populistas.
@@ -53,3 +54,4 @@ Por fim, serão realizadas etapas de integração, testes e implantação do sis
   Toda a construção do projeto será orientada por princípios de neutralidade ideológica, transparência metodológica e acessibilidade. A linguagem utilizada na apresentação dos conteúdos será simples e inclusiva, com foco em legibilidade e organização visual que favoreça a leitura.
 
 As fontes utilizadas serão públicas e rastreáveis, e a metodologia de análise deverá ser clara o suficiente para permitir compreensão e eventual auditoria. O objetivo final é ampliar o discernimento e a capacidade crítica da população brasileira, estimulando uma relação mais consciente com o processo democrático e fortalecendo a cobrança fundamentada durante o exercício do mandato.
+
