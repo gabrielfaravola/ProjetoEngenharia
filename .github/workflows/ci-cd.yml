@@ -131,7 +131,7 @@ jobs:
         docker build \
             -t ${{ secrets.DOCKER_HUB_USER }}/system-eleic:${{ needs.prepare.outputs.tag }} \
             -t ${{ secrets.DOCKER_HUB_USER }}/system-eleic:latest \
-            .backend/sistema-java/app
+            ./backend/sistema-java/app
             
     - name: Push Imagem Java
       run: |
@@ -160,7 +160,7 @@ jobs:
         docker build \
               -t ${{ secrets.DOCKER_HUB_USER_PYTHON }}/ai-sys-eleic:${{ needs.prepare.outputs.tag }} \
               -t ${{ secrets.DOCKER_HUB_USER_PYTHON }}/ai-sys-eleic:latest \
-              ".backend/ai-python"
+              "./backend/ai-python"
             
     - name: Push Imagem Python
       run: |
