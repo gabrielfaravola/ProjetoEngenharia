@@ -1,5 +1,8 @@
-package app.app.domain;
+package app.app.domain.Candidato;
 
+import GraficoCategoria.Categoria;
+import app.app.domain.Plano.PlanoDeGoverno;
+import app.app.domain.Posicionamento.PosicionamentoPublico;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,15 +20,16 @@ public class Candidato {
 
     private String nome;
     private String partido;
+    private String linkFoto;
 
-    //Talvez fazer um enum com os Possiveis Cargos
+    @Enumerated(EnumType.STRING)
     private String cargo;
-    private Float indiceDeCoerencia;
 
-    /*Pensar em como implementar o Grafico de Radar, Lista de Qualidades
-    Ou uma classe grafico com as qualidades, a ideia eh que cada Categoria
-    do Plano receba uma porcentagem com base no qunato eh abordada considerando
-    plano + posicionamentos publicos*/
+    private Float indiceDeCoerencia;
+    private Integer anoDisputado;
+
+    //VER COMO FAZER RELACOES COM ENUM (CATEGORIA PRECISA DE CANDIDATO, INDICEDE APARIÇÃO)
+    //Lista de Categorias
 
     @OneToOne(mappedBy = "candidato")
     private PlanoDeGoverno planoDeGoverno;
