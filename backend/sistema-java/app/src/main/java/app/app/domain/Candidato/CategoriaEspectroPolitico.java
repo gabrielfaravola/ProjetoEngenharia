@@ -1,4 +1,4 @@
-package app.app.domain;
+package app.app.domain.Candidato;
 
 public enum CategoriaEspectroPolitico {
     EXTREMA_ESQUERDA(),

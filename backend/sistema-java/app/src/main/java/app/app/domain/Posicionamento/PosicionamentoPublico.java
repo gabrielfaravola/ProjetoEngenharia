@@ -1,5 +1,6 @@
-package app.app.domain;
+package app.app.domain.Posicionamento;
 
+import app.app.domain.Candidato.Candidato;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
