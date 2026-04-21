@@ -23,7 +23,7 @@ public class Candidato {
     private String linkFoto;
 
     @Enumerated(EnumType.STRING)
-    private String cargo;
+    private Cargo cargo;
 
     private Float indiceDeCoerencia;
     private Integer anoDisputado;
