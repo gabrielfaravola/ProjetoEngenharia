@@ -1,4 +1,4 @@
-CREATE TABLE categoria_classificaion(
+CREATE TABLE categoria_classification(
     id           BIGSERIAL PRIMARY KEY,
     candidato_id BIGINT NOT NULL,
     categoria    VARCHAR(100),
