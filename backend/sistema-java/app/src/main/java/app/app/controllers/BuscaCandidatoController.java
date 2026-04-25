@@ -1,7 +1,7 @@
-package app.app.adapters.in_web;
+package app.app.controllers;
 
-import app.app.adapters.in_web.DTO.BuscarCandidatoDTO;
-import app.app.application.BuscaCandidato.ConsultaCandidatoService;
+import app.app.DTO.BuscarCandidatoDTO;
+import app.app.services.BuscaCandidato.ConsultaCandidatoService;
 import app.app.domain.Candidato.Candidato;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.xml.transform.Result;
 import java.util.List;
 
 @RestController

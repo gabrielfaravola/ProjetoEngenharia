@@ -1,4 +1,4 @@
-package app.app.application.BuscaCandidato;
+package app.app.services.BuscaCandidato;
 
 import app.app.domain.Candidato.Candidato;
 import app.app.domain.Candidato.Cargo;

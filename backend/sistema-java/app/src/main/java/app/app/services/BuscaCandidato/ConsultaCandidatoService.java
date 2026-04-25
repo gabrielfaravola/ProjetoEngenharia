@@ -1,8 +1,8 @@
-package app.app.application.BuscaCandidato;
+package app.app.services.BuscaCandidato;
 
 import app.app.domain.Candidato.Candidato;
-import app.app.application.port.CandidatoRepository;
 import app.app.domain.Candidato.Cargo;
+import app.app.repository.CandidatoJpaRepository;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
@@ -11,12 +11,11 @@ import java.util.List;
 @Service
 public class ConsultaCandidatoService {
 
-    private final CandidatoRepository candidatoRepository;
+    private final CandidatoJpaRepository candidatoRepository;
 
-    public ConsultaCandidatoService(CandidatoRepository candidatoRepository) {
+    public ConsultaCandidatoService(CandidatoJpaRepository candidatoRepository) {
         this.candidatoRepository = candidatoRepository;
     }
-
 
     //tratar melhor condicoes de erro e regras de negocio
     public List<Candidato> listarComCriteria(String nome, Integer ano, String partido, Cargo cargo, String estado, String cidade){
@@ -41,23 +40,23 @@ public class ConsultaCandidatoService {
             spec = spec.and(CandidatoSearchCriteria.cidade(cidade));
         }
 
-        return this.candidatoRepository.listar(spec);
+        return this.candidatoRepository.findAll(spec);
     }
 
     public List<Integer> listarAnos(){
-        return candidatoRepository.listarAnos();
+        return candidatoRepository.getAnosDistintos();
     }
 
     public List<String> listarPartidos(){
-        return candidatoRepository.listarPartido();
+        return candidatoRepository.getPartidosDistintos();
     }
 
     public List<String> listarEstados(){
-        return candidatoRepository.listarEstado();
+        return candidatoRepository.getEstadosDistintos();
     }
 
     public List<String> listarCidades(){
-       return candidatoRepository.listarCidade();
+       return candidatoRepository.getCidadesDistintos();
     }
 
 }

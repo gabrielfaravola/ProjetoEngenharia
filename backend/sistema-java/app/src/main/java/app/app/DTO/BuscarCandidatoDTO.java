@@ -1,4 +1,4 @@
-package app.app.adapters.in_web.DTO;
+package app.app.DTO;
 
 import app.app.domain.Candidato.Cargo;
 
