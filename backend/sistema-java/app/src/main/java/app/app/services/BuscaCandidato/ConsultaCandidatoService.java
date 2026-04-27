@@ -1,11 +1,13 @@
 package app.app.services.BuscaCandidato;
 
+import app.app.DTO.RetornarBuscaCandidatoDTO;
 import app.app.domain.Candidato.Candidato;
 import app.app.domain.Candidato.Cargo;
 import app.app.repository.CandidatoJpaRepository;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -17,8 +19,7 @@ public class ConsultaCandidatoService {
         this.candidatoRepository = candidatoRepository;
     }
 
-    //tratar melhor condicoes de erro e regras de negocio
-    public List<Candidato> listarComCriteria(String nome, Integer ano, String partido, Cargo cargo, String estado, String cidade){
+    public RetornarBuscaCandidatoDTO listarComCriteria(String nome, Integer ano, String partido, Cargo cargo, String estado, String cidade){
         Specification<Candidato> spec = Specification.where(null);
 
         if(nome != null && !nome.isBlank()){
@@ -40,7 +41,17 @@ public class ConsultaCandidatoService {
             spec = spec.and(CandidatoSearchCriteria.cidade(cidade));
         }
 
-        return this.candidatoRepository.findAll(spec);
+        List<Candidato> listCandidato = this.candidatoRepository.findAll(spec);
+        List<String> listEstados = new ArrayList<>();
+        List<String>  listCidades = new ArrayList<>();
+        if(cargo != null && cargo != Cargo.PRESIDENTE){
+            listEstados = listCandidato.stream().map(Candidato::getEstado).distinct().toList();
+        }
+        if(cargo == Cargo.VEREADOR || cargo == Cargo.PREFEITO){
+            listCidades = listCandidato.stream().map(Candidato::getCidade).distinct().toList();
+        }
+
+        return new RetornarBuscaCandidatoDTO(listCandidato, listEstados, listCidades);
     }
 
     public List<Integer> listarAnos(){
@@ -49,14 +60,6 @@ public class ConsultaCandidatoService {
 
     public List<String> listarPartidos(){
         return candidatoRepository.getPartidosDistintos();
-    }
-
-    public List<String> listarEstados(){
-        return candidatoRepository.getEstadosDistintos();
-    }
-
-    public List<String> listarCidades(){
-       return candidatoRepository.getCidadesDistintos();
     }
 
 }

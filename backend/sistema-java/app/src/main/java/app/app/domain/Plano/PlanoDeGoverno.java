@@ -2,21 +2,21 @@ package app.app.domain.Plano;
 
 import app.app.domain.Candidato.Candidato;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
 import java.util.List;
 
 @Entity
 @Getter
-@Setter
+@Builder
 @Table(name = "plano_governo")
+@NoArgsConstructor
+@AllArgsConstructor
 public class PlanoDeGoverno {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    //Pensar em colocar um Atributo sobre o link onde o plano esta armazenado para analises futuras
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "candidato_id")

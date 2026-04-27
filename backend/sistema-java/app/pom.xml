@@ -56,6 +56,12 @@
 			<artifactId>flyway-core</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>s3</artifactId>
+			<version>2.42.41</version>
+			<scope>compile</scope>
+		</dependency>
 
 	</dependencies>
 

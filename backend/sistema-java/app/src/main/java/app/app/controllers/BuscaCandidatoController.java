@@ -1,8 +1,8 @@
 package app.app.controllers;
 
 import app.app.DTO.BuscarCandidatoDTO;
+import app.app.DTO.RetornarBuscaCandidatoDTO;
 import app.app.services.BuscaCandidato.ConsultaCandidatoService;
-import app.app.domain.Candidato.Candidato;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,8 +19,8 @@ public class BuscaCandidatoController {
     private ConsultaCandidatoService consultaCandidatoService;
 
     @PostMapping("/candidatos")
-    public ResponseEntity<List<Candidato>> buscarCandidato(@RequestBody BuscarCandidatoDTO buscarCandidatoDTO){
-        List<Candidato> candidatoList = this.consultaCandidatoService.listarComCriteria(
+    public ResponseEntity<RetornarBuscaCandidatoDTO> buscarCandidato(@RequestBody BuscarCandidatoDTO buscarCandidatoDTO){
+        RetornarBuscaCandidatoDTO result = this.consultaCandidatoService.listarComCriteria(
                 buscarCandidatoDTO.nome(),
                 buscarCandidatoDTO.ano(),
                 buscarCandidatoDTO.partido(),
@@ -28,7 +28,7 @@ public class BuscaCandidatoController {
                 buscarCandidatoDTO.estado(),
                 buscarCandidatoDTO.cidade()
         );
-        return ResponseEntity.ok(candidatoList);
+        return ResponseEntity.ok(result);
     }
 
     @GetMapping("/candidatos/anos")
@@ -41,17 +41,5 @@ public class BuscaCandidatoController {
     public ResponseEntity<List<String>> getPartidos(){
         List<String> partidos = consultaCandidatoService.listarPartidos();
         return ResponseEntity.ok(partidos);
-    }
-
-    @GetMapping("/candidatos/estados")
-    public ResponseEntity<List<String>> getEstados(){
-        List<String> estados = consultaCandidatoService.listarEstados();
-        return ResponseEntity.ok(estados);
-    }
-
-    @GetMapping("/candidatos/cidades")
-    public ResponseEntity<List<String>> getCidades(){
-        List<String> cidades = consultaCandidatoService.listarCidades();
-        return ResponseEntity.ok(cidades);
     }
 }
