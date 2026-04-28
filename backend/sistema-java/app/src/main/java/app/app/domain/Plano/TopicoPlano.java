@@ -22,5 +22,6 @@ public class TopicoPlano {
     @Enumerated(EnumType.STRING)
     private Categoria categoria;
     private String resumo;
+    private Integer quantidadePropostas;
     private Float indiceDeCoerencia;
 }

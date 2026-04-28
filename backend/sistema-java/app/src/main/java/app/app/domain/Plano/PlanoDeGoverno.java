@@ -22,8 +22,10 @@ public class PlanoDeGoverno {
     @JoinColumn(name = "candidato_id")
     private Candidato candidato;
     private String resumo;
+    private String bucketName;
+    private String bucketKey;
 
-    @OneToMany(mappedBy = "plano")
+    @OneToMany(mappedBy = "plano", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TopicoPlano> topicoPlanoList;
 
 }

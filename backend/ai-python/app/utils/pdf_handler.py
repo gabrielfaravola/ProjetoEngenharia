@@ -1,14 +1,16 @@
 import os
-import fitz  # PyMuPDF
+import fitz
 from pathlib import Path
 from app.core.config import settings
 
-#TODO - lógica para pegar cada arquivo 
-DIRETORIO_PDFS = Path(settings.upload_dir)
-NOME_DO_ARQUIVO = "13.pdf" 
+#Buscar no Bucket- Definir um dos arquivos para teste
+#Conectar ao Bucket
+#Chamar API para salvar
+DIRETORIO_PDFS = "eleicoesystem-bucket"
+NOME_DO_ARQUIVO = "Eleicoes/2022/Presidente/PlanoGoverno_Jair_Bolsonaro.pdf"
 
-# Inicializa o novo cliente oficial do Gemini
-
+# Ve se tem um bucket com o link recebido
+# pega o conteudo e faz o processo de caracter
 def PDFManager(nome_arquivo: str):
     caminho_completo = DIRETORIO_PDFS / nome_arquivo
 
