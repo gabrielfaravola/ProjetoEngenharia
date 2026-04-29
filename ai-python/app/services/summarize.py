@@ -356,7 +356,7 @@ class gemini_handler():
                 s3_client.put_object(
                     Bucket=bucketName,
                     Key="Resumos/Bolsonaro.json",
-                    Body=data.encode("utf-8"),
+                    Body=json.dumps(data, ensure_ascii=False, Indent=2).encode("utf-8"),
                     ContentType="application/json"
                 )
 

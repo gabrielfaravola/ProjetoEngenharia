@@ -50,7 +50,6 @@ def PDFManager(bucketName, bucketKey):
         if not texto_extraido.strip():
             print("Aviso: O PDF parece ser composto apenas por imagens (OCR necessário).")
         
-        print(texto_extraido)
         return texto_extraido[:25000]
 
     except Exception as e:
