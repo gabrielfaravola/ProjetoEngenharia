@@ -144,7 +144,7 @@ jobs:
 
     - name: Renomear Imagem
       run: |
-          docker tag system-eleic:latest swr.sa-brazil-1.myhuaweicloud.com/experimental/system-eleic:latest
+          docker tag ${{ secrets.DOCKER_HUB_USER }}/system-eleic:latest swr.sa-brazil-1.myhuaweicloud.com/experimental/system-eleic:latest
     - name: Push Image
       run: |
           sudo docker push swr.sa-brazil-1.myhuaweicloud.com/experimental/system-eleic:latest
