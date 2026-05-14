@@ -30,7 +30,7 @@ export default function DetalheCandidato() {
     setLoading(true);
     const candidatoId = Array.isArray(id) ? id[0] : id;
 
-    fetch(`/api/candidato/${candidatoId}`)
+    fetch(`http://localhost:8080/candidato/${candidatoId}`)
       .then(res => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
